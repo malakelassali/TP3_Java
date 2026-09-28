@@ -20,13 +20,20 @@ public class ArraySort {
         }
 
         for (int i = 1; i < arr.length; i++) {
-            int j= i-1;
-            while (sortedArray[i] > sortedArray[j]) {
+            int j= i;
+            while (j > 0 && sortedArray[j] > sortedArray[j-1]) {
+                swap(sortedArray, j, j-1);
                 j--;
             }
-            swap(sortedArray, i, ++j);
+
         }
         return sortedArray;
     }
 
+    public static void main(String[] args) {
+        int[] arr= {106, 26, 81, 5, 15, 130};
+        printArray(arr);
+    System.out.println("Sorted Array: ");
+        printArray(sortIntegers(arr));
+    }
 }
