@@ -15,10 +15,14 @@ public class JaggedArray {
         return jagged;
     }
 
+    public static void printMatrix(int[][] arr){
+        for (int i = 0; i<arr.length; i++){
+            ex2.ArrayReverse.printArray(arr[i]);
+        }
+    }
+
     public static void main(String[] args) {
         int[][] result= jaggedArray(1, 1);
-        for (int i = 0; i<5; i++){
-            ex2.ArrayReverse.printArray(result[i]);
-        }
+        printMatrix(result);
     }
 }
